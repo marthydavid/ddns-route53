@@ -1,0 +1,23 @@
+{
+  "Comment": "Auto updating by marthydavid/ddns-route53",
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+          "ResourceRecords":[{ "Value": "$currentIp" }],
+          "Name": "$HOSTNAME",
+          "Type": "A",
+          "TTL": 300
+      }
+    },
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+          "ResourceRecords":[{ "Value": "$currentIp" }],
+          "Name": "*.$HOSTNAME",
+          "Type": "A",
+          "TTL": 300
+      }
+    }
+  ]
+}
